@@ -10,8 +10,7 @@
   "license": "MIT",
   "main": "src/index.tsx",
   "scripts": {
-    "develop": "concurrently -r \"npm:type-check:watch\" \"npm:start\"",
-    "start": "parcel ./src/index.html",
+    "start": "node ./app.js",
     "build": "npm run type-check && parcel build ./src/index.html --public-url '/'",
     "prettify": "prettier --write './src/**/*.{ts,tsx}'",
     "test": "jest",
@@ -20,9 +19,7 @@
     "type-check:watch": "tsc --noEmit --watch"
   },
   "husky": {
-    "hooks": {
-      "pre-commit": "npm run prettify && npm run test"
-    }
+    "hooks": {}
   },
   "engines": {
     "node": ">= 8.11.0",
@@ -51,15 +48,20 @@
     "Parcel"
   ],
   "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.19.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.3",
+    "redux-thunk": "^2.3.0",
+    "regenerator-runtime": "^0.13.2"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
     "@types/node": "^11.13.6",
     "@types/react": "^16.8.14",
     "@types/react-dom": "^16.8.4",
-    "concurrently": "^4.1.0",
     "husky": "^1.3.1",
     "jest": "^24.7.1",
     "jest-dom": "^3.1.3",

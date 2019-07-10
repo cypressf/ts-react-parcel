@@ -1,12 +1,16 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es5",
     "module": "commonjs",
     "strict": true,
     "jsx": "react",
     "rootDir": "./src",
     "incremental": true,
     "experimentalDecorators": true,
-    "lib": ["dom", "es2015"]
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.promise"
+    ]
   }
 }
