@@ -1,5 +1,5 @@
 import React, { useEffect, Fragment } from 'react'
-import { startPage } from 'animated-gif/utils/setupApp'
+import { startPage } from '~/utils/setupApp'
 
 export const App = () => {
   useEffect(startPage, [])
