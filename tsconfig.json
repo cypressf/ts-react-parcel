@@ -7,10 +7,11 @@
     "rootDir": "./src",
     "incremental": true,
     "experimentalDecorators": true,
-    "lib": [
-      "dom",
-      "es5",
-      "es2015.promise"
-    ]
+    "esModuleInterop": true,
+    "lib": ["dom", "es5", "es2015.promise"],
+    "baseUrl": ".",
+    "paths": {
+      "animated-gif/*": ["./src/*"]
+    }
   }
 }
