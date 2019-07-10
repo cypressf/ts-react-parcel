@@ -1,10 +1,10 @@
-import * as React from 'react'
-import { startPage } from './script'
+import React, { useEffect, Fragment } from 'react'
+import { startPage } from 'animated-gif/utils/setupApp'
 
 export const App = () => {
-  React.useEffect(startPage, [])
+  useEffect(startPage, [])
   return (
-    <React.Fragment>
+    <Fragment>
       <div id="videocontainer" className="fade-out">
         <video muted={true} preload="auto" />
         <video muted={true} preload="auto" />
@@ -57,6 +57,6 @@ export const App = () => {
         src="https://www.youtube.com/embed/hHW1oY26kxQ?enablejsapi=1"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       />
-    </React.Fragment>
+    </Fragment>
   )
 }
